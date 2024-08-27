@@ -10,14 +10,14 @@ var saida = document.querySelector("#mensagemCripto");
 function criptografar() {
     var text = entrada.value;
 
-    // Verifica se há caracteres especiais
+    
     if (/[^a-z\s]/.test(text)) {
         alert("Não é permitido uso de caracteres especiais e letras Maiúsculas!");
-        entrada.value = ""; // Limpa o campo de entrada
-        return; // Interrompe a função se caracteres especiais forem encontrados
+        entrada.value = ""; 
+        return; 
     }
 
-    // Substitui as letras conforme o padrão estabelecido
+    
     var criptoText = text
         .replace(/[e]/gi, "enter")
         .replace(/[i]/gi, "imes")
@@ -27,7 +27,7 @@ function criptografar() {
 
     console.log(criptoText);
     saida.innerText = criptoText;
-    entrada.value = ""; // Limpa o campo de entrada após a criptografia
+    entrada.value = ""; 
 }
 
 function descriptografar(){
